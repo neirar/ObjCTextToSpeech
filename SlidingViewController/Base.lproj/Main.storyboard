@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RNRootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="315"/>
+        </scene>
+        <!--Make a Selection-->
+        <scene sceneID="SDS-68-zE9">
+            <objects>
+                <tableViewController storyboardIdentifier="MenuViewController" id="Yiu-KU-EPB" customClass="RNMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ENA-j9-dBQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCell" textLabel="FO6-TA-5Gj" style="IBUITableViewCellStyleDefault" id="57L-Wu-TnC">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="57L-Wu-TnC" id="GTV-TI-QMB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FO6-TA-5Gj">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="Yiu-KU-EPB" id="oBH-sk-pYn"/>
+                            <outlet property="delegate" destination="Yiu-KU-EPB" id="2SD-Au-JNS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Make a Selection" id="CIK-da-3cq">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="Vb3-kD-bB7">
+                            <connections>
+                                <action selector="_close:" destination="Yiu-KU-EPB" id="Vro-X7-yxd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SPh-hK-JkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008" y="1052"/>
+        </scene>
+        <!--Number Spelling View Controller-->
+        <scene sceneID="f2R-s1-2Ch">
+            <objects>
+                <viewController storyboardIdentifier="NumberSpellingViewController" id="447-oz-YU2" customClass="RNNumberSpellingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rHz-5A-OcI"/>
+                        <viewControllerLayoutGuide type="bottom" id="6jz-D3-Zwv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="12S-dJ-gt3">
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number in words in current language" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tO-Z5-NVs">
+                                <rect key="frame" x="26" y="69" width="548" height="30"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2kX-qO-kVZ" appends="YES" id="m4O-rf-WHy"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="32" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dMO-b9-vdd">
+                                <rect key="frame" x="26" y="119" width="548" height="132"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="100"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number in words in other language" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-SV-tVR">
+                                <rect key="frame" x="26" y="295" width="548" height="30"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5DZ-3d-kmr" appends="YES" id="zgN-BJ-6jN"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mn-Bf-YVp">
+                                <rect key="frame" x="26" y="50" width="63" height="19"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2kX-qO-kVZ" appends="YES" id="77u-qo-QFj"/>
+                                </connections>
+                            </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other Language" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiT-4I-b6W">
+                                <rect key="frame" x="26" y="276" width="107" height="19"/>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5DZ-3d-kmr" appends="YES" id="TRO-Rv-obh"/>
+                                </connections>
+                            </label>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Speaker" translatesAutoresizingMaskIntoConstraints="NO" id="Pku-Mt-Taj">
+                                <rect key="frame" x="97" y="39" width="30" height="30"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="2kX-qO-kVZ" appends="YES" id="yVP-Vj-hnp"/>
+                                </connections>
+                            </imageView>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Speaker" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-Qq-ML1">
+                                <rect key="frame" x="141" y="265" width="30" height="30"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5DZ-3d-kmr" appends="YES" id="axx-NH-pdI"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lk1-SV-tVR" firstAttribute="top" secondItem="CiT-4I-b6W" secondAttribute="bottom" id="1lJ-CY-r3W"/>
+                            <constraint firstItem="Pku-Mt-Taj" firstAttribute="leading" secondItem="8Mn-Bf-YVp" secondAttribute="trailing" constant="8" symbolic="YES" id="2So-0w-x7S"/>
+                            <constraint firstItem="3tO-Z5-NVs" firstAttribute="top" secondItem="8Mn-Bf-YVp" secondAttribute="bottom" id="3mt-jQ-21r"/>
+                            <constraint firstItem="CiT-4I-b6W" firstAttribute="leading" secondItem="lk1-SV-tVR" secondAttribute="leading" id="5iA-f0-ie5"/>
+                            <constraint firstItem="Pku-Mt-Taj" firstAttribute="bottom" secondItem="8Mn-Bf-YVp" secondAttribute="bottom" id="8fZ-ml-ZBO"/>
+                            <constraint firstItem="6jz-D3-Zwv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="lk1-SV-tVR" secondAttribute="bottom" constant="10" id="FEF-GI-pgN"/>
+                            <constraint firstItem="3tO-Z5-NVs" firstAttribute="leading" secondItem="12S-dJ-gt3" secondAttribute="leadingMargin" constant="10" id="Nhn-Ct-lEp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3tO-Z5-NVs" secondAttribute="trailing" constant="10" id="RSw-S5-gHv"/>
+                            <constraint firstItem="CiT-4I-b6W" firstAttribute="top" secondItem="dMO-b9-vdd" secondAttribute="bottom" constant="25" id="Wea-IV-gxD"/>
+                            <constraint firstItem="3tO-Z5-NVs" firstAttribute="leading" secondItem="8Mn-Bf-YVp" secondAttribute="leading" id="eFy-YO-lqr"/>
+                            <constraint firstItem="2a4-Qq-ML1" firstAttribute="leading" secondItem="CiT-4I-b6W" secondAttribute="trailing" constant="8" symbolic="YES" id="fp2-F4-Apb"/>
+                            <constraint firstItem="2a4-Qq-ML1" firstAttribute="bottom" secondItem="CiT-4I-b6W" secondAttribute="bottom" id="hjn-iV-Qdk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lk1-SV-tVR" secondAttribute="trailing" constant="10" id="j3c-R9-tzG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dMO-b9-vdd" secondAttribute="trailing" constant="10" id="lC0-LF-bg4"/>
+                            <constraint firstItem="8Mn-Bf-YVp" firstAttribute="top" secondItem="rHz-5A-OcI" secondAttribute="bottom" constant="30" id="mAD-mZ-exC"/>
+                            <constraint firstItem="lk1-SV-tVR" firstAttribute="leading" secondItem="12S-dJ-gt3" secondAttribute="leadingMargin" constant="10" id="nTk-cH-uI7"/>
+                            <constraint firstItem="dMO-b9-vdd" firstAttribute="top" secondItem="3tO-Z5-NVs" secondAttribute="bottom" constant="20" id="pIG-63-ccL"/>
+                            <constraint firstItem="dMO-b9-vdd" firstAttribute="leading" secondItem="12S-dJ-gt3" secondAttribute="leadingMargin" constant="10" id="vEi-mX-HUr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentLanguage" destination="8Mn-Bf-YVp" id="u8u-un-WwO"/>
+                        <outlet property="currentLanguageGestureRecognizer" destination="2kX-qO-kVZ" id="LPJ-uC-vl0"/>
+                        <outlet property="numberInCurrentLanguage" destination="3tO-Z5-NVs" id="Qcm-6E-A0J"/>
+                        <outlet property="numberInOtherLanguage" destination="lk1-SV-tVR" id="mTy-Bh-lO2"/>
+                        <outlet property="numberLabel" destination="dMO-b9-vdd" id="dR2-LU-8SG"/>
+                        <outlet property="otherLanguage" destination="CiT-4I-b6W" id="B89-ul-1Dh"/>
+                        <outlet property="otherLanguageGestureRecognizer" destination="5DZ-3d-kmr" id="Ltd-9O-nDt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C5j-sy-BIy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="2kX-qO-kVZ">
+                    <connections>
+                        <action selector="_sayNumberInCurrentLanguage:" destination="447-oz-YU2" id="iE7-2c-35R"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="5DZ-3d-kmr">
+                    <connections>
+                        <action selector="_sayNumberInOtherLanguage:" destination="447-oz-YU2" id="UF1-ar-co1"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1023" y="1771"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Speaker" width="30" height="30"/>
+    </resources>
+</document>
