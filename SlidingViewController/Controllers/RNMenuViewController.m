@@ -67,7 +67,7 @@
 }
 
 
-- (void)_populateCell:(UITableViewCell *)cell withLanguageAtIncdex:(NSUInteger)index {
+- (void)_populateCell:(UITableViewCell *)cell withLanguageAtIndex:(NSUInteger)index {
 	NSLocale *locale = self.locales[index];
 	
 	NSLocale *currentLocale = [NSLocale currentLocale];
@@ -82,7 +82,7 @@
 }
 
 
-- (void)_populateCell:(UITableViewCell *)cell withNumberAtIncdex:(NSUInteger)index {
+- (void)_populateCell:(UITableViewCell *)cell withNumberAtIndex:(NSUInteger)index {
 	NSNumber *number = self.numbers[index];
 	cell.textLabel.text = [number stringValue];
 	
@@ -133,10 +133,10 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCell" forIndexPath:indexPath];
 	
 	if (indexPath.section == 0) {
-		[self _populateCell:cell withLanguageAtIncdex:indexPath.row];
+		[self _populateCell:cell withLanguageAtIndex:indexPath.row];
 	}
 	else {
-		[self _populateCell:cell withNumberAtIncdex:indexPath.row];
+		[self _populateCell:cell withNumberAtIndex:indexPath.row];
 	}
 	
 	return cell;
