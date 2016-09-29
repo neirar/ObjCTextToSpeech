@@ -169,7 +169,7 @@ static NSString * BCP47LanguageCodeFromISO681LanguageCode(NSString *ISO681Langua
 - (AVSpeechUtterance *)_utteranceWithString:(NSString *)string BCP47LanguageCode:(NSString *)languageCode {
 	AVSpeechUtterance *utterance = [[AVSpeechUtterance alloc] initWithString:string];
 	utterance.voice = [AVSpeechSynthesisVoice voiceWithLanguage:languageCode];
-	utterance.rate = AVSpeechUtteranceMinimumSpeechRate;
+	utterance.rate = AVSpeechUtteranceDefaultSpeechRate;
 	utterance.preUtteranceDelay = 0.100;
 	
 	return utterance;
